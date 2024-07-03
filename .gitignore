@@ -129,13 +129,13 @@ dmypy.json
 .pyre/
 
 # Project settings
-data/
+data/*
 !data/README.md
 
-models/
+models/*
 !models/README.md
 
-outputs/
+outputs/*
 !outputs/README.md
 
 
