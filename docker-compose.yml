@@ -9,11 +9,16 @@ services:
       args:
         - BASE_IMAGE=nvcr.io/nvidia/pytorch:23.10-py3
         - PROJECT_NAME=docker-ml-template
+        - UID=1000
+        - GID=1000
         - USE_POETRY=false
     volumes:
       - ${HOME}/docker-ml-template:/home/docker/docker-ml-template
       - ${HOME}/Datasets:/home/docker/Datasets
       - ${HOME}/Models:/home/docker/Models
+      - ${HOME}/Outputs:/home/docker/Outputs
+      # windowsからだとうまくssh agent forwardingができなかったので.sshをマウントする
+      - ${HOME}/.ssh:/home/docker/.ssh
     tty: true
     stdin_open: true
     privileged: true
