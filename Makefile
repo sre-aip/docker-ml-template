@@ -32,7 +32,7 @@ install-mmcv:
 # MAX_JOBSを指定しないとnvcc error : 'cudafe++' died due to signal 9 (Kill signal)が発生する場合あり
 # export MAX_JOBS=12; pip install -U openmim && mim install mmengine && mim install mmcv==2.1.0
 # wheelファイルを取っておくと便利
-	pip install /home/docker/ecopork_sbir_algos/mmcv-2.1.0-cp310-cp310-linux_x86_64.whl
+	pip install /home/docker/docker-ml-template/mmcv-2.1.0-cp310-cp310-linux_x86_64.whl
 
 .PHONY: install-mmlab
 install-mmlab:
